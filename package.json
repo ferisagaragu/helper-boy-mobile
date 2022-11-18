@@ -6,9 +6,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ionic capacitor run android -l --external",
-    "build": "ng build",
+    "build": "ionic capacitor build android",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "echo hello",
     "lint": "ng lint"
   },
   "private": true,
