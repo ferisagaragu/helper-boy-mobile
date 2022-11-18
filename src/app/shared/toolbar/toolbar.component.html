@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ng-content></ng-content>
+    </ion-title>
+
+    <ion-buttons *ngIf="subPage" slot="start">
+      <ion-back-button defaultHref="/" text="regresar"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

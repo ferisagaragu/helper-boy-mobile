@@ -1,0 +1,7 @@
+{
+  "name": "helper-boy-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

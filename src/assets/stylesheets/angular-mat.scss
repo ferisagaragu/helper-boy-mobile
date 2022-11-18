@@ -1,0 +1,78 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary-palette: (
+  50: var(--ion-color-primary),
+  100: var(--ion-color-primary),
+  200: var(--ion-color-primary),
+  300: var(--ion-color-primary),
+  400: var(--ion-color-primary),
+  500: var(--ion-color-primary),
+  600: var(--ion-color-primary),
+  700: var(--ion-color-primary),
+  800: var(--ion-color-primary),
+  900: var(--ion-color-primary),
+  A100: var(--ion-color-primary),
+  A200: var(--ion-color-primary),
+  A400: var(--ion-color-primary),
+  A700: var(--ion-color-primary),
+  contrast: (
+    50: var(--ion-color-primary-contrast),
+    100: var(--ion-color-primary-contrast),
+    200: var(--ion-color-primary-contrast),
+    300: var(--ion-color-primary-contrast),
+    400: var(--ion-color-primary-contrast),
+    500: var(--ion-color-primary-contrast),
+    600: var(--ion-color-primary-contrast),
+    700: var(--ion-color-primary-contrast),
+    800: var(--ion-color-primary-contrast),
+    900: var(--ion-color-primary-contrast),
+    A100: var(--ion-color-primary-contrast),
+    A200: var(--ion-color-primary-contrast),
+    A400: var(--ion-color-primary-contrast),
+    A700: var(--ion-color-primary-contrast)
+  )
+);
+
+$accent-palette: (
+  50: var(--ion-color-secondary),
+  100: var(--ion-color-secondary),
+  200: var(--ion-color-secondary),
+  300: var(--ion-color-secondary),
+  400: var(--ion-color-secondary),
+  500: var(--ion-color-secondary),
+  600: var(--ion-color-secondary),
+  700: var(--ion-color-secondary),
+  800: var(--ion-color-secondary),
+  900: var(--ion-color-secondary),
+  A100: var(--ion-color-secondary),
+  A200: var(--ion-color-secondary),
+  A400: var(--ion-color-secondary),
+  A700: var(--ion-color-secondary),
+  contrast: (
+    50: var(--ion-color-secondary-contrast),
+    100: var(--ion-color-secondary-contrast),
+    200: var(--ion-color-secondary-contrast),
+    300: var(--ion-color-secondary-contrast),
+    400: var(--ion-color-secondary-contrast),
+    500: var(--ion-color-secondary-contrast),
+    600: var(--ion-color-secondary-contrast),
+    700: var(--ion-color-secondary-contrast),
+    800: var(--ion-color-secondary-contrast),
+    900: var(--ion-color-secondary-contrast),
+    A100: var(--ion-color-secondary-contrast),
+    A200: var(--ion-color-secondary-contrast),
+    A400: var(--ion-color-secondary-contrast),
+    A700: var(--ion-color-secondary-contrast)
+  )
+);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: mat.define-palette($primary-palette, 500),
+    accent: mat.define-palette($accent-palette, 500),
+  )
+));
+
+@include mat.all-component-themes($my-theme);
