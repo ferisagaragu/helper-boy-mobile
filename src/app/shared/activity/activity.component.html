@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar *ngIf="!modal" color="primary">
+    <ion-title *ngIf="!showSearchInput">
+      {{ title }}
+    </ion-title>
+
+    <ion-searchbar
+      *ngIf="showSearchInput"
+      id="searchbar"
+      class="animate__animated very-faster"
+      [class.animate__slideInDown]="showSearchInput"
+      (ionChange)="onSearchChange($event)"
+    ></ion-searchbar>
+
+    <ion-buttons *ngIf="subPage" slot="start">
+      <ion-back-button defaultHref="/" text="regresar"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons *ngIf="search" slot="end">
+      <ion-button *ngIf="showSearchInput" (click)="onCloseSearch()">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button *ngIf="!showSearchInput" (click)="showSearchInput = true">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="modal">
+    <ion-buttons *ngIf="cancelBtn" slot="start">
+      <ion-button
+        color="medium"
+        (click)="cancel.emit()"
+      >
+        {{ cancelBtn }}
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      {{ title }}
+    </ion-title>
+
+    <ion-buttons *ngIf="confirmBtn" slot="end">
+      <ion-button
+        color="secondary"
+        (click)="confirm.emit()"
+      >
+        {{ confirmBtn }}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

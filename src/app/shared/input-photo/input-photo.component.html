@@ -1,0 +1,21 @@
+<ion-spinner *ngIf="loadImage"></ion-spinner>
+
+<ion-img
+  *ngIf="image"
+  class="pb2 image-round"
+  [src]="image"
+  (click)="openCamera()"
+  (ionImgWillLoad)="loadImage = true"
+  (ionImgDidLoad)="loadImage = false"
+>
+</ion-img>
+
+<div *ngIf="!loadImage && !image" class="ion-text-center p">
+  <button
+    mat-stroked-button
+    color="accent"
+    type="button"
+  >
+    <ion-icon name="camera" (click)="openCamera()"></ion-icon>
+  </button>
+</div>
