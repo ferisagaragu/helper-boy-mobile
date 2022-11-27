@@ -1,0 +1,10 @@
+button {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 80px !important;
+  font-size: 22px;
+}
+
+ion-img::part(image) {
+  border-radius: 18px;
+}

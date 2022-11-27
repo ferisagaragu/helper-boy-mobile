@@ -1,13 +1,38 @@
-<app-toolbar>
-  Día de compras
-</app-toolbar>
+<app-activity
+  title="Día de compras"
+  [search]="true"
+  (searchKeyUp)="foodSearch = $event"
+>
+</app-activity>
 
-<ion-content class="ion-padding">
-  <button mat-stroked-button color="accent">
-    I'm from material
-  </button>
+<ion-content>
+  <app-list-food
+    [load]="loadFoods"
+    [foods]="foods"
+    [search]="foodSearch"
+    (refresh)="findAllFoods($event)"
+    (update)="onUpdateFood($event)"
+    (delete)="onDeleteFood($event)"
+  >
+  </app-list-food>
 
-  <ion-button color="primary">
-    I'm from ionic
-  </ion-button>
+  <ion-fab *ngIf="!foodSearch" slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="secondary" (click)="onAddFood()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-chip class="badge-bottom" color="secondary">
+    <mat-spinner
+      *ngIf="loadAmount"
+      color="accent"
+      strokeWidth="2"
+      diameter="20"
+    >
+    </mat-spinner>
+
+    <span *ngIf="!loadAmount">
+      {{ amount | currency }}
+    </span>
+  </ion-chip>
 </ion-content>
