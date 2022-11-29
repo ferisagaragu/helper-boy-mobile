@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Pequeño ayudador</string>
+<string name="app_name">helper-boy-mobile_0.0.1</string>
     <string name="title_activity_main">Pequeño ayudador</string>
     <string name="package_name">org.pechblenda.helperboymobile</string>
     <string name="custom_url_scheme">org.pechblenda.helperboymobile</string>
