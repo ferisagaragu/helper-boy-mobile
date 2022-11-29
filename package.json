@@ -7,7 +7,6 @@
     "ionic": "ionic",
     "gradlew": "android/gradlew",
     "start": "ionic capacitor run android -l --external",
-    "build:android": "ionic capacitor copy android && cd android && gradlew assembleDebug && cd ..",
     "watch": "ng build --watch --configuration development",
     "test": "echo hello",
     "lint": "ng lint"
