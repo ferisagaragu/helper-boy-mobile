@@ -28,7 +28,6 @@ log.txt
 /tmp
 /out-tsc
 /bazel-out
-/ios
 
 # Node
 /node_modules
@@ -45,7 +44,6 @@ yarn-error.log
 *.sublime-project
 *.sublime-workspace
 .scannerwork/
-ios/
 
 # Visual Studio Code
 .vscode/*
