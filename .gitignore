@@ -44,6 +44,8 @@ yarn-error.log
 .settings/
 *.sublime-project
 *.sublime-workspace
+.scannerwork/
+ios/
 
 # Visual Studio Code
 .vscode/*
